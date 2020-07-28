@@ -22,6 +22,9 @@ RUN git clone https://github.com/wjwwood/serial.git && cd serial && git checkout
     git clone https://github.com/d4n1elchen/raceon_visualizer.git && cd raceon_visualizer && git checkout 0326a7b && cd .. && \
     git clone https://github.com/d4n1elchen/racecar_gazebo.git && cd racecar_gazebo && git checkout bfe03fe
     
+WORKDIR /race-on-ws
+
+RUN source /opt/ros/melodic/setup.bash && catkin_make
  
 # To run on GitHub actions
 ENTRYPOINT ["bash", "/github/workspace/run.sh"]
