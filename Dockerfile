@@ -14,7 +14,6 @@ WORKDIR /race-on-ws/src
 
 # Install Source Code
 RUN git clone https://github.com/wjwwood/serial.git && cd serial && git checkout cbcca7c && cd .. && \
-    git clone https://github.com/ros-drivers/ackermann_msgs.git && cd ackermann_msgs && git checkout 1.0.2 && cd .. && \
     git clone https://github.com/mit-racecar/racecar.git && cd racecar && git checkout 5fce2cc && cd .. && \
     git clone https://github.com/mit-racecar/vesc.git && cd vesc && git checkout 5127d60 && cd .. && \
     git clone https://github.com/d4n1elchen/raceon.git && cd raceon && git checkout 952a596 && cd .. && \
