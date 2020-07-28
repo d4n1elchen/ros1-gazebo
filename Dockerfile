@@ -26,3 +26,5 @@ RUN git clone https://github.com/wjwwood/serial.git && cd serial && git checkout
 WORKDIR /race-on-ws
 
 RUN catkin_make
+
+# TO DO: add entry point
