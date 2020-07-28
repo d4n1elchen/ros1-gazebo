@@ -23,8 +23,5 @@ RUN git clone https://github.com/wjwwood/serial.git && cd serial && git checkout
     git clone https://github.com/d4n1elchen/racecar_gazebo.git && cd racecar_gazebo && git checkout bfe03fe
     
  
-WORKDIR /race-on-ws
-
-RUN catkin_make
-
-# TO DO: add entry point
+# To run on GitHub actions
+ENTRYPOINT ["bash", "/github/workspace/run.sh"]
