@@ -5,7 +5,7 @@ RUN apt-get update && apt-get install -q -y --no-install-recommends \
     ros-melodic-ros-control=0.18.1-1* \
     ros-melodic-gazebo-ros-control=2.8.7-1* \
     ros-melodic-ros-controllers=0.17.0-1* \
-    ros-melodic-ackermann-msgs= \
+    ros-melodic-ackermann-msgs=1.0.1-0* \
     python-empy \
     python-opencv \
     && rm -rf /var/lib/apt/lists/*
