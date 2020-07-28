@@ -8,6 +8,7 @@ RUN apt-get update && apt-get install -q -y --no-install-recommends \
     ros-melodic-ackermann-msgs=1.0.1-0* \
     python-empy \
     python-opencv \
+    libyaml-cpp-dev \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /race-on-ws/src
