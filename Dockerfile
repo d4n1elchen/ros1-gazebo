@@ -26,8 +26,7 @@ WORKDIR /race-on-ws
 
 RUN ["bash", "-c", "source /opt/ros/melodic/setup.bash && catkin_make"]
 
-RUN rosdep init && \
-    rosdep update --rosdistro $ROS_DISTRO
+RUN rosdep update --rosdistro $ROS_DISTRO
  
 # To run on GitHub actions
 ENTRYPOINT ["bash", "/github/workspace/run.sh"]
