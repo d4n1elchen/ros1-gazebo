@@ -24,9 +24,7 @@ RUN git clone https://github.com/wjwwood/serial.git && cd serial && git checkout
     
 WORKDIR /race-on-ws
 
-RUN ["bash", "-c", "source /opt/ros/melodic/setup.bash && catkin_make"]
-
-RUN rosdep update --rosdistro $ROS_DISTRO
+RUN ["bash", "-c", "source /opt/ros/melodic/setup.bash && catkin_make && source /race-on-ws/devel/setup.bash && rosdep update --rosdistro $ROS_DISTRO"]
  
 # To run on GitHub actions
 ENTRYPOINT ["bash", "/github/workspace/run.sh"]
